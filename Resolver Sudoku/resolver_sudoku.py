@@ -52,7 +52,7 @@ def es_posible(x, y, v, sudoku):
     return True
 
 
-def resolver_sudoku(sudoku):
+def resolver_sudoku1(sudoku):
     for y in range(9):
         for x in range(9):
             if sudoku[y][x] == 0:
@@ -65,7 +65,36 @@ def resolver_sudoku(sudoku):
     print_sudoku(sudoku)
     return
 
+
+def resolver_sudoku(sudoku):
+    """
+    Esta implementación es casi la misma que la de resolver_sudoku1
+    Pero aqui regresamos un bool indicando si ya fue resuelto
+    o no
+    Esto nos permite terminar el algoritmo cuando se encuentra una solución
+    El sudoku original es actualizado y contiene la respuesta
+    """
+    for fila in range(9):
+        for columna in range(9):
+            if sudoku[fila][columna] == 0:                
             
-resolver_sudoku(sudoku)
-#print_sudoku(sudoku)
+                for valor in range(1,10):
+                    
+                    if es_posible(columna,fila,valor,sudoku):
+                        
+                        sudoku[fila][columna] = valor
+                        resuelto = resolver_sudoku(sudoku)
+                        if resuelto:
+                            return True
+                        sudoku[fila][columna] = 0
+                        
+                return False
+    #print_sudoku(sudoku)
+    return True
+            
+resuelto = resolver_sudoku(sudoku)
+if resuelto:
+    print_sudoku(sudoku)
+else:
+    print("No encontre solución a tu sudoku :(")
 #es_posible(6, 8, 3, sudoku)
