@@ -95,18 +95,30 @@ def es_posible(x, y, v, sudoku):
 
 
 def resolver_sudoku(sudoku):
-    for y in range(9):
-        for x in range(9):
-            if sudoku[y][x] == 0:
+    """
+    Esta implementación es casi la misma que la de resolver_sudoku1
+    Pero aqui regresamos un bool indicando si ya fue resuelto
+    o no
+    Esto nos permite terminar el algoritmo cuando se encuentra una solución
+    El sudoku original es actualizado y contiene la respuesta
+    """
+    for fila in range(9):
+        for columna in range(9):
+            if sudoku[fila][columna] == 0:                
+            
                 for valor in range(1,10):
-                    if es_posible(x, y, valor, sudoku):
-                        sudoku[y][x] = valor
-                        resolver_sudoku(sudoku)
-                        sudoku[y][x] = 0
-                return
-    print("Esta es la solucion a tu SUDOKU:")
-    print_sudoku(sudoku)
-    return
+                    
+                    if es_posible(columna,fila,valor,sudoku):
+                        
+                        sudoku[fila][columna] = valor
+                        resuelto = resolver_sudoku(sudoku)
+                        if resuelto:
+                            return True
+                        sudoku[fila][columna] = 0
+                        
+                return False
+    #print_sudoku(sudoku)
+    return True
 
 #s = sudoku_manual()
 s = leer_ny_times_sudoku()
