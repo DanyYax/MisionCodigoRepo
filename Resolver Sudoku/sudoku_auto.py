@@ -14,7 +14,7 @@ def subir_solucion(sudoku):
     return
     
 
-def leer_ny_times_sudoku(dificultad="medium"):
+def leer_ny_times_sudoku(dificultad="hard"):
     
     driver = webdriver.Firefox()
     url = "https://www.nytimes.com/puzzles/sudoku/" + dificultad
