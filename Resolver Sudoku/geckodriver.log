@@ -1,0 +1,65 @@
+1641924962845	geckodriver	INFO	Listening on 127.0.0.1:55550
+1641924965830	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\danie\\AppData\\Local\\Temp\\rust_mozprofilenaKoZL"
+1641924966764	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\danie\\AppData\\Local\\Temp\\rust_mozprofilenaKoZL\\search.json.mozlz4", (void 0)))
+1641924969129	Marionette	INFO	Listening on port 55564
+1641924969465	Marionette	WARN	TLS certificate errors will be ignored for this session
+Marionette threw an error: TypeError: this.curBrowser.contentBrowser is null
+GeckoDriver.prototype.navigateTo@chrome://marionette/content/driver.js:918:3
+
+1641925014620	Marionette	INFO	Stopped listening on port 55564
+1641925020001	geckodriver	INFO	Listening on 127.0.0.1:55739
+1641925022972	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\danie\\AppData\\Local\\Temp\\rust_mozprofile0Iyvxy"
+1641925023268	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\danie\\AppData\\Local\\Temp\\rust_mozprofile0Iyvxy\\search.json.mozlz4", (void 0)))
+1641925025022	Marionette	INFO	Listening on port 55751
+1641925025088	Marionette	WARN	TLS certificate errors will be ignored for this session
+1641925032210	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'loading'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1641925042105	Marionette	INFO	Stopped listening on port 55751
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1641925065792	geckodriver	INFO	Listening on 127.0.0.1:58617
+1641925068767	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\danie\\AppData\\Local\\Temp\\rust_mozprofilecRjn7Y"
+1641925069062	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\danie\\AppData\\Local\\Temp\\rust_mozprofilecRjn7Y\\search.json.mozlz4", (void 0)))
+1641925070711	Marionette	INFO	Listening on port 58629
+1641925070783	Marionette	WARN	TLS certificate errors will be ignored for this session
+1641925077139	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'loading'.
+JavaScript error: https://ads.pubmatic.com/AdServer/js/user_sync.html?p=156011&s=165626&predirect=https%3A%2F%2Fs.amazon-adsystem.com%2Fecm3%3Fid%3DPM_UID%26ex%3Dpubmatic.com&userIdMacro=PM_UID, line 1: ReferenceError: CommonMeta is not defined
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1641925113483	Marionette	INFO	Stopped listening on port 58629
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1641925146876	geckodriver	INFO	Listening on 127.0.0.1:58940
+1641925149847	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\danie\\AppData\\Local\\Temp\\rust_mozprofileEyiTzg"
+1641925150251	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\danie\\AppData\\Local\\Temp\\rust_mozprofileEyiTzg\\search.json.mozlz4", (void 0)))
+1641925152053	Marionette	INFO	Listening on port 58954
+1641925152465	Marionette	WARN	TLS certificate errors will be ignored for this session
+1641925158924	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'loading'.
+1641925159006	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'loading'.
+JavaScript warning: https://www.googletagmanager.com/gtm.js?id=GTM-P528B3&gtm_auth=tfAzqo1rYDLgYhmTnSjPqw&gtm_preview=env-130&gtm_cookies_win=x, line 1: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtm.js?id=GTM-P528B3&gtm_auth=tfAzqo1rYDLgYhmTnSjPqw&gtm_preview=env-130&gtm_cookies_win=x, line 1: unreachable code after return statement
+[Child 7216, MediaDecoderStateMachine #1] WARNING: 24c0826e580 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1641925184729	Marionette	INFO	Stopped listening on port 58954
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1641925286644	geckodriver	INFO	Listening on 127.0.0.1:59403
+1641925289633	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\danie\\AppData\\Local\\Temp\\rust_mozprofilefEdCcJ"
+1641925289921	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\danie\\AppData\\Local\\Temp\\rust_mozprofilefEdCcJ\\search.json.mozlz4", (void 0)))
+1641925291495	Marionette	INFO	Listening on port 59415
+1641925291653	Marionette	WARN	TLS certificate errors will be ignored for this session
+1641925297678	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'loading'.
+JavaScript error: https://ads.pubmatic.com/AdServer/js/user_sync.html?p=156011&s=165626&predirect=https%3A%2F%2Fs.amazon-adsystem.com%2Fecm3%3Fid%3DPM_UID%26ex%3Dpubmatic.com&userIdMacro=PM_UID, line 1: ReferenceError: CommonMeta is not defined
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1641925364787	Marionette	INFO	Stopped listening on port 59415
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
