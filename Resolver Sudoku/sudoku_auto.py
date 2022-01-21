@@ -1,5 +1,18 @@
 from selenium import webdriver
 import time
+import pyautogui as pg
+
+def subir_solucion(sudoku):
+    for row in sudoku:
+        for ele in row:
+            pg.press(str(ele))
+            pg.press("right")
+        pg.press("down")
+        pg.press("left", presses=8)
+        
+    print("Eso es todo !!!")
+    return
+    
 
 def leer_ny_times_sudoku(dificultad="hard"):
     
@@ -120,8 +133,16 @@ def resolver_sudoku(sudoku):
     #print_sudoku(sudoku)
     return True
 
+
 #s = sudoku_manual()
 s = leer_ny_times_sudoku()
 
-resolver_sudoku(s)
+resuelto = resolver_sudoku(s)
+if resuelto:
+    print("Solución encontrada:")
+    print_sudoku(s)
+    subir_solucion(s)
+else:
+    print("No Encontré una solución para tu sudoku ...")
+
 #es_posible(6, 8, 3, sudoku)
