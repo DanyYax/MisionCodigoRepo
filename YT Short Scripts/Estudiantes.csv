@@ -1,6 +1,8 @@
-Matricula,Nombre,Calificacion
-4322,Donald,78
-9879,Hugo,80
-0988,Paco,60
-9877,Luis,90
-0980,Rosita,100
+Matricula,Nombre,Calificacion,Edad,Apellido
+4322,Donald,78,30,Duck
+9879,Hugo,80,8,Duck
+0988,Paco,60,8,Duck
+9877,Luis,90,8,Duck
+0980,Rosita,100,6,Duck
+123231,Goofy,99,35,
+9877984,Mickey,60,60,Mouse
