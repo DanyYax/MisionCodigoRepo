@@ -3,9 +3,12 @@ import pandas as pd
 # leemos nuestro csv directo a un dataframe
 df = pd.read_csv("Estudiantes.csv")
 
+df = df.dropna()
+
 print(df)
 print()
 
-print(df["Apellido"].value_counts())
+prom = df["Calificacion"].mean()
+print(prom)
 
-print(df["Apellido"].sort())
+print((78 +80 +60 +90 +100 +99 +60) / 7)
