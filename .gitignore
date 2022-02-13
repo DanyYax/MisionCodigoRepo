@@ -1,3 +1,8 @@
 
 *.DS_Store
 *.log
+IGAutoImagen/config/
+
+IGAutoImagen/CreacionImagenes/Posts/
+
+IGAutoImagen/CreacionImagenes/PostsInstagram - Copy.csv
