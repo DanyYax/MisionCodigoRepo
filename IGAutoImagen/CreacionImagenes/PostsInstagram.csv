@@ -1,6 +1,6 @@
 Numero,Texto,Hecho,Caption
-1,Inserte Frase motivacional,Si,Pie de Pagina
-2,Just Do it,,A veces solo necesitas empezar para lograr lo que quieres
-3,Que vas a hacer hoy?,,Piensa en tus metas y lo que estas haciendo para lograrlas
-4,A nadie le importa,,Algo
-5,El Exito esta a un intento,,No te detengas ...
+1,Ejemplo ya hecho,Si,Pie de Pagina
+2,BOT de Instagram,SI,Este post fue hecho automaticamente usando python. Te gustaria aprender como? El tutorial completo esta en mi bio.
+3,Post automatico,SI,Este post se hizo con un bot de instagram en python
+4,A nadie le importa,SI,Algo interesante
+5,El Exito esta a un intento,SI,No te detengas ...
