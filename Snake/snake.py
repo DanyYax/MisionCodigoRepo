@@ -2,6 +2,17 @@
 # Let´s do a SNAKE game
 # RETRO style
 #
+""" Code by Dany Jacquez
+for video tutorial in Youtube Mision Codigo:
+Watch it here: 
+
+Extra Challenges to implement:
+ - Change the character for the food and maybe the snake
+ - Add a time limit for each food.
+ - Create a new screen with more walls after player's score
+   reaches 10
+"""
+
 
 import curses
 import random
