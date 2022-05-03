@@ -6,3 +6,8 @@ IGAutoImagen/config/
 IGAutoImagen/CreacionImagenes/Posts/
 
 IGAutoImagen/CreacionImagenes/PostsInstagram - Copy.csv
+
+# Ignore Files in the transcript folder for
+# Youtube subtitle getter
+YTTranscriptGen/transcripts/*
+
