@@ -11,3 +11,5 @@ IGAutoImagen/CreacionImagenes/PostsInstagram - Copy.csv
 # Youtube subtitle getter
 YTTranscriptGen/transcripts/*
 
+# Ignore pyc files
+*.pyc
