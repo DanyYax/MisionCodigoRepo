@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} - FlaskApp Tutorial</title>
+</head>
+
+<body>
+    <nav class="menu">
+        <a href="{{ url_for('hello') }}">FlaskApp</a>
+        <a href="{{ url_for('see_messages') }}">Messages</a>
+        <a href="{{ url_for('about') }}">About</a>
+    </nav>
+    
+    <div class="banner">
+        <h1>Mision Codigo <br> Subscribe :)</h1>
+    </div>
+
+    <hr>
+    {% block content %} {% endblock %}
+</body>
+
+</html>

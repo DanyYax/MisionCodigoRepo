@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Messages
+{% endblock %}
+
+{% block content %}
+    <h2>This are your messages</h2>
+    {% for task in tasks %}
+        {% if task.status == 'COMPLETE'%}
+            {% set my_color='#24a813' %}
+        {% else %}
+            {% set my_color='#137aa8' %}
+        {% endif %}
+        
+        <div style="padding: 10px; color:{{my_color}} ; margin: 20px">
+            <p style="font-size: 24px">Task: {{ task.text }} Status: {{ task.status }}</p>
+        </div>
+
+    {% endfor %}
+    <h3>This is an app developed for a tutorial using Flask and Python.</h3>
+{% endblock %}

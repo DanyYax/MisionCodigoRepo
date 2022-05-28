@@ -1,0 +1,14 @@
+
+div.banner {
+    color: #f3952f;
+    background: #aad4e6;
+    padding: 30px;
+    font-size: 30px;
+    text-align:center;
+}
+nav a {
+    color: #137aa8;
+    font-size: 3em;
+    margin-left: 50px;
+    text-decoration: none;
+}
