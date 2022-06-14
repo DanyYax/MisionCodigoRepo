@@ -1,50 +1,40 @@
 #
-#
-#
+# 
 #
 
-import argparse
 import logging
+import argparse
 import sys
 
 def main():
-    '''
-    Esta es una funcion para ejecutar el script desde otros scripts.
-    Cuando se use esta funcion desde otro script se debe de asignar las flags de logging
-    :return:
-    '''
     logger.info("-" * 50)
-    logger.info("          Titulo de Script")
+    logger.info("          Script Name here")
     logger.info("-" * 50)
-
-    # agregar codigo a partir de aqui
-
 
 if __name__ == '__main__':
-    '''
-    Esta es lal funcion que se ejecuta directamente de este script con parsing de entradas (input), opciones y logging
-    '''
-    parser = argparse.ArgumentParser(description='Describe tu codigo aqui')
-    parser.add_argument('-v', '--verbosity', type=int, default=0, help='Nivel de informacion impresa a stdout')
+    parser = argparse.ArgumentParser(description='Describe your script')
+    parser.add_argument('-v', '--verbosity', type=int, default=1, help='Select output level: 0: WARNING, 1: INFO, 10: DEBUG')
     args = parser.parse_args()
 
-    # Sistema de Log
+    # Log Settings
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.DEBUG)
 
-    # manejo de archivo
-    log_file = "tu_script.log"
+    # Handle the log file
+    log_file = "script.log"
     handler = logging.FileHandler(log_file, mode='w')
     handler.setLevel(logging.DEBUG)
 
-    # Crear formato de Logging
+    # Create the Logginf Format
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     handler.setFormatter(formatter)
 
-    # crear handle para std
+    # Create a handle for stdout as well
     handler2 = logging.StreamHandler(sys.stdout)
     handler2.setLevel(logging.INFO)
-    if (args.verbosity > 9):
+    if (args.verbosity == 0):
+        handler2.setLevel(logging.WARNING)
+    elif (args.verbosity > 9):
         handler2.setLevel(logging.DEBUG)
 
     formatter2 = logging.Formatter('[-] %(message)s')
@@ -53,11 +43,8 @@ if __name__ == '__main__':
     # agregar hanldes a logger
     logger.addHandler(handler)
     logger.addHandler(handler2)
-    logger.info('Archivo de Log escrito a archivo %s\n' %log_file)
-    logger.debug('Corriendo con verbosity nivel: %i' %args.verbosity)
+    logger.info('Log file: %s\n' %log_file)
+    logger.debug('Verbosity Level Selected: %i' %args.verbosity)
 
-
-    #llamar al codigo principal
+    # call main code
     main()
-
-    logger.info("FIN")
