@@ -17,7 +17,7 @@ en python como:
 ## Secciones
 1. [Introduccion a Turtle](#intro-turtle)
 2. Hagamos a Pac-Man
-3 Control con Teclado
+3. Control con Teclado
 4. Tablero de Juego
 5. Debug extra para ayudarnos
 6. Deteccion de Colision (Pac-Man vs Paredes)
