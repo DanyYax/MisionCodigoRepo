@@ -1,6 +1,72 @@
 import turtle
 
 DIRECTIONS = ["UP", "DOWN", "LEFT", "RIGHT"]
+TILE_SIZE = 20
+
+
+def draw_tile(t: turtle.Turtle, w: float):
+    t.begin_fill()
+    for _ in range(4):
+        t.forward(w)
+        t.right(90)
+    t.end_fill()
+    
+    
+class GameStage:
+    def __init__(self, width: int, height: int) -> None:
+        self.sw = width 
+        self.sh = height
+        self.grid_x = 0
+        self.grid_y = 0
+        self.grid = None
+        
+        self.grid = [
+            [1, 1, 1, 1, 1],
+            [1, 0, 0, 0, 1],
+            [1, 0, 1, 0, 1],
+            [1, 0, 1, 0, 1],
+            [1, 0, 0, 0, 1],
+            [1, 1, 1, 1, 1],
+        ]
+        
+        # self.grid = [
+        #     [1, 1],
+        #     [1, 1],
+        # ]
+
+        self.grid_x = len(self.grid[0])
+        self.grid_y = len(self.grid)
+        print(f"Game Grid is {self.grid_x} X {self.grid_y}")
+        
+        # Calcular tamaño de cuadricula
+        self.tile_width = self.sw / self.grid_x
+        
+        return
+    
+    def draw(self) -> None:
+        t = turtle.Turtle()
+        turtle.tracer(0, 0)
+        t.fillcolor("blue")
+        
+        t.penup()
+        t.goto(-self.sw * 0.5, self.sh * 0.5)
+        
+        t.pendown()
+        for col_id, col in enumerate(self.grid):
+            for row_id, val in enumerate(col):
+                t.fillcolor("blue")
+                if val == 1:
+                    t.fillcolor("red")
+                # Dibujar un cuadrado
+                draw_tile(t, self.tile_width)
+                t.forward(self.tile_width)
+            t.right(90)
+            t.forward(self.tile_width)
+            t.right(90)
+            t.forward(self.tile_width * self.grid_x)
+            t.right(180)
+
+        turtle.update()
 
 
 class Character:
@@ -57,32 +123,19 @@ if __name__ == '__main__':
     screen_height = 800
     s.setup(screen_width, screen_height)
 
-    pacman = Character(s, "Pacman", "yellow")
-    pacman.draw()
-    # pacman.move()
+    game_stage = GameStage(screen_width - 50, screen_height - 100)
+    game_stage.draw()
+
+    # pacman = Character(s, "Pacman", "yellow")
+    # pacman.draw()
     
-    # t = turtle.Turtle()
-    # t.forward(100)
-    # t.right(90)
-    # t.forward(100)
-    
-    # colors = ['red', 'purple', 'blue', 'green', 'orange', 'yellow']
-    # t = turtle.Pen()
-    # turtle.bgcolor('black')
-    # turtle.speed("fast")
-    # for x in range(360):
-    #     t.pencolor(colors[x%6])
-    #     t.width(x//100 + 1)
-    #     t.forward(x)
-    #     t.left(59)
-    
-    s.onkeypress(pacman.move_up, "Up")
-    s.onkeypress(pacman.move_down, "Down")
-    s.onkeypress(pacman.move_right, "Right")
-    s.onkeypress(pacman.move_left, "Left")
+    # s.onkeypress(pacman.move_up, "Up")
+    # s.onkeypress(pacman.move_down, "Down")
+    # s.onkeypress(pacman.move_right, "Right")
+    # s.onkeypress(pacman.move_left, "Left")
     turtle.listen()
     
     # s.mainloop()
     while True:
-        pacman.move()
+        # pacman.move()
         s.update()
